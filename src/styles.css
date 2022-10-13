@@ -1,0 +1,54 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+#btn {
+  background-color: #555;
+  border-radius: 10px;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100px;
+}
+
+.meter {
+  box-sizing: content-box;
+  height: 20px;
+  width: 100%;
+  position: relative;
+  margin: 1rem;
+  background: #555;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.animate > span:after {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.orange > span {
+  background-image: linear-gradient(#f1a165, #f36d0a);
+}
+
+.nostripes > span > span,
+.nostripes > span::after {
+  background-image: none;
+}
